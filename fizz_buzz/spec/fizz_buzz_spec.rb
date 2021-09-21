@@ -1,7 +1,7 @@
 require_relative'../lib/fizz_buzz.rb'
 
 # ******* Test Cases *******
-# when given multiple of 3, retunr 'Fizz'
+# when given multiple of 3, return 'Fizz'
 # when given multiple of 5, return 'Buzz'
 # when given multiple of 3 & 5, return 'FuzzBuzz'
 # otherwise, return the number
