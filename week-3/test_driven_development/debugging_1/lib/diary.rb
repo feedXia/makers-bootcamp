@@ -9,13 +9,14 @@ class Diary
   def add_appointment(appointment)
     raise "You're not free at that time" if not_free?(appointment)
     @appointments.delete(appointment)
+    @appointments.push(appointment)
   end
 
   private
 
   def not_free?(appointment)
     appointments.any? do |existing_appointment|
-      existing_appointment.start_time == appointment.end_time &&
+      existing_appointment.start_time <= appointment.end_time &&
         appointment.start_time <= existing_appointment.end_time
     end
   end
