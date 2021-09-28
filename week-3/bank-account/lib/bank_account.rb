@@ -1,4 +1,4 @@
-# Apply what you have learned about TDD to build a single BankAccount object based on the following user stories.
+
 
 # * As a customer,
 # * So that I can keep my money safe,
@@ -14,13 +14,20 @@
 
 class BankAccount
 
+  attr_reader :balance
+
+  def initialize
+    @balance = 0
+  end
+
   def deposit_money(amount)
-    @balance = amount
-    return "Money deposited successfully!"
+    @balance += amount
+    return "£#{amount} deposited successfully!"
   end
 
   def withdraw_money(amount)
-    return "Money withdrawn successfully!"
+    @balance -= amount
+    return "£#{amount} withdrawn successfully!"
   end
 
   def view_balance

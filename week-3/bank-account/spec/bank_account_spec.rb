@@ -2,24 +2,26 @@ require'bank_account'
 
 describe BankAccount do
   describe '#deposit_money' do
-    it "deposits £100 customer's bank account" do
-      expect(subject.deposit_money(100)).to eq "Money deposited successfully!"
-    end
-
-    it "deposits £50 customer's bank account" do
-      expect(subject.deposit_money(50)).to eq "Money deposited successfully!"
+    context "given an amount of money" do
+      it "deposits it into customer's bank account" do
+        amount = 100
+        expect(subject.deposit_money(amount)).to eq "£#{amount} deposited successfully!"
+      end
     end
   end
 
   describe '#deduct_money' do
-    it "deducts amount customer want's to withdraw from their bank account" do
-      expect(subject.withdraw_money(50)). to eq "Money withdrawn successfully!"
+    context "given an amount of money" do
+      it "deducts it from customer's bank account" do
+        amount = 50
+        expect(subject.withdraw_money(amount)).to eq "£#{amount} withdrawn successfully!"
+      end
     end
   end
 
   describe '#view_balance' do
     it "shows balance" do
-      expect(subject.view_balance).to eq "Your balance is £#{50}"
+      expect(subject.view_balance).to eq "Your balance is £#{balance}"
     end
   end
 end
