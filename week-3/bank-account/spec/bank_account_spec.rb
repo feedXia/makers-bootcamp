@@ -1,4 +1,4 @@
-require'bank_account'
+require 'bank_account'
 
 describe BankAccount do
   describe '#deposit_money' do
