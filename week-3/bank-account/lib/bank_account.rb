@@ -31,6 +31,6 @@ class BankAccount
   end
 
   def view_balance
-    return "Your balance is £50"
+    return "Your balance is £#{balance}"
   end
 end

@@ -21,7 +21,11 @@ describe BankAccount do
 
   describe '#view_balance' do
     it "shows balance" do
-      expect(subject.view_balance).to eq "Your balance is £#{balance}"
+      amount_deposit = 100
+      subject.deposit_money(amount_deposit)
+      amount_withdraw = 50
+      subject.withdraw_money(amount_withdraw)
+      expect(subject.view_balance).to eq "Your balance is £#{amount_deposit - amount_withdraw}"
     end
   end
 end

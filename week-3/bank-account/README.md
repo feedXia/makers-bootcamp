@@ -2,7 +2,13 @@
 
 _Makers Bootcamp Week 3 Test Driven Development Key Skills Exercise_
 
-This project applied my test driven development learnings to build a single BankAccount object based on the following user stories: 
+## Project Focus
+
+Adopting a rigorous test driven development(TDD) process - Red, Green, Refactor.
+
+## User Stories
+
+This project applies my test driven development learnings to build a single BankAccount object based on the following user stories: 
 
 ```
 As a customer,
