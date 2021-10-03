@@ -1,10 +1,9 @@
-require_relative "../lib/diary.rb"
-require_relative "../lib/security.rb"
-require "date"
+require_relative "../lib/diary_one_class.rb"
 
 RSpec.describe Diary do
-  let(:entry) { entry = double(:entry, date: Date.today, text: "Dear Diary.") }
-  subject(:diary) { described_class.new() }
+  let(:entry_time) { Time.now }
+  let(:entry) { entry = double(:entry, entry_time: entry_time, text: "Dear Diary.") }
+  subject(:diary) { described_class.new }
 
   # describe "#add_entry" do
   #   it "adds an entry with a date, title and some text" do

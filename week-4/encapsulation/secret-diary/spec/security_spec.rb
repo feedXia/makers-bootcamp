@@ -1,8 +1,8 @@
-require_relative "../lib/diary_lock.rb"
+require_relative "../lib/security.rb"
 require_relative "../lib/diary.rb"
 
-RSpec.describe DiaryLock do
-  let(:diary) { Diary.new(diary_lock) }
+RSpec.describe Security do
+  let(:diary) { Diary.new }
   let(:entry) { entry = double(:entry, entry_time: entry_time, text: "Dear Diary.") }
 
   # describe "#lock" do
