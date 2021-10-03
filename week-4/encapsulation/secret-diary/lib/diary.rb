@@ -7,13 +7,17 @@ class Diary
   end
 
   def add_entry(entry)
-    fail "Diary is locked!" if locked?
+    fail "Cannot add entry: diary is locked!" if locked?
     entries.push(entry)
+    # Alternatively, to accept user input for diary entry
+    # entry = gets.chomp
+    # @entries << {date: Date.today, text: entry}
   end
 
   def get_entries
-    fail "Diary is locked!" if locked?
-    entries
+    fail "Cannot get entry: diary is locked!" if locked?
+    # puts "Here are your entries: "
+    @entries
   end
 
   def lock
