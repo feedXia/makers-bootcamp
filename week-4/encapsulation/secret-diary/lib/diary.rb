@@ -16,7 +16,7 @@ class Diary
 
   def get_entries
     fail "Cannot get entry: diary is locked!" if locked?
-    # puts "Here are your entries: "
+    puts "Here are your entries: "
     @entries
   end
 
