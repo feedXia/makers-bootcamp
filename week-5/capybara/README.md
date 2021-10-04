@@ -152,8 +152,9 @@ including Capybara::DSL in the global scope is not recommended!
 [7] pry(main)> click_link 'Start Workout!'
 ```
 
-- You should see a Firefox browser window pop open with the web-page
-- **SUCCESS**
+- You should see a Firefox browser window pop open with the Capybara Workout web-page
+  ![Capybary Workout Window](https://github.com/feedXia/makers-bootcamp/blob/c24e8b526c09d12bc2e9d449d2ee01fe5cdbc936/week-5/capybara/Screenshot%202021-10-04%20at%2019.04.43.png)
+  **SUCCESS!!!**
 
 # 5. Celebrate! :partying_face:
 
