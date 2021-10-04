@@ -2,7 +2,7 @@
 
 [Exercise Link](https://capybara-workout.herokuapp.com)
 
-A step-by-step guide for all of the many many _many_ errors I encountered when I worked through this exercise.
+A step-by-step guide for all of the many many _many_ errors we encountered when we worked through this exercise.
 
 _Disclaimer: This took MUCH longer than the advertised 12 mins!_
 
