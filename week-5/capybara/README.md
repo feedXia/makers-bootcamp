@@ -10,7 +10,7 @@ _Disclaimer: This took MUCH longer than the advertised 12 mins!_
 
 - Run `bundle init`
 - Open the Gemfile created in your directory
-- remove all commands in your Gemfile until it only contains this:
+- Remove all commands in your Gemfile until it only contains this:
 
 ```
 source "https://rubygems.org"
