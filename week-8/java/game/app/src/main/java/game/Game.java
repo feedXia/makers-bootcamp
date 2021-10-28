@@ -1,25 +1,23 @@
 package game;
 
-class Game {
+public class Game {
 
   String word;
+  int attempts = 10;
 
   public Game(String gameWord) {
-    // word = "MAKERS";
     word = gameWord;
   }
 
   public static void main(String[] args) {
-    // String result = "M_____";
-    Game game = new Game("MAKERS");
-    char firstLetter = game.word.charAt(0);
-    System.out.println(firstLetter);
-    // System.out.printf("%s\n", result);
+    Game guessingGame = new Game("MAKERS");
+    System.out.println(guessingGame.getWordToGuess());
+    System.out.printf("%d attempts remaining...\n", guessingGame.getRemainingAttempts());
   }
 
   public String getWordToGuess() {
     StringBuilder builder = new StringBuilder();
-    for (int i = 0; i == this.word.length(); i++) {
+    for (int i = 0; i < this.word.length(); i++) {
       Character currentLetter = word.charAt(0);
       if (i == 0) {
         builder.append(currentLetter);
@@ -27,6 +25,11 @@ class Game {
         builder.append("_");
       }
     }
+    return builder.toString();
+  }
+
+  public Integer getRemainingAttempts() {
+    return this.attempts;
   }
 
 }
