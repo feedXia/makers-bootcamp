@@ -2,22 +2,23 @@ package game;
 
 public class Game {
 
-  String word;
+  private static String word;
   int attempts = 10;
 
-  public Game(String gameWord) {
-    word = gameWord;
+  public Game(WordChooser wordchooser) {
+    word = wordchooser.getRandomWordFromDictionary();
   }
 
   public static void main(String[] args) {
-    Game guessingGame = new Game("MAKERS");
+    Game guessingGame = new Game(new WordChooser());
     System.out.println(guessingGame.getWordToGuess());
     System.out.printf("%d attempts remaining...\n", guessingGame.getRemainingAttempts());
+    System.out.printf("The random word is: %s \n", word);
   }
 
   public String getWordToGuess() {
     StringBuilder builder = new StringBuilder();
-    for (int i = 0; i < this.word.length(); i++) {
+    for (int i = 0; i < word.length(); i++) {
       Character currentLetter = word.charAt(0);
       if (i == 0) {
         builder.append(currentLetter);
@@ -31,5 +32,4 @@ public class Game {
   public Integer getRemainingAttempts() {
     return this.attempts;
   }
-
 }
